@@ -11,6 +11,8 @@ import '@components/ModalGreeting';
 
 import {LitElement, html} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
+import { IonicShowModal, IonicShowToast } from "@utils/IonicHelper";
+import Header from "@components/Header.wc.svelte";
 
   try {
       customElements.define(
@@ -48,14 +50,18 @@ import {customElement, property} from 'lit/decorators.js';
     return (modalElement as any).present();
  */
 
-    const popover = await modalController.create({
+    /* const popover = await modalController.create({
       component: 'simple-greeting'      
     })
  
     await popover.present();
     const {data} = await popover.onDidDismiss();
     console.log(data);
-    }
+    } */
+
+    IonicShowModal('wc-header', Header, {});
+    IonicShowToast({message: "Ionic woo!"})
+  }
 
   function wooo() {
     alert("Wooo!");

@@ -1,3 +1,4 @@
+import { modalController } from '@ionic/core';
 import {html, css, LitElement} from 'lit';
 import {customElement, property} from 'lit/decorators.js';
 
@@ -7,10 +8,13 @@ export class SimpleGreeting extends LitElement {
 
   @property()
  
+  dismissModal() {
+    modalController.dismiss();
+  }
 
   render() {
-    return html`<p>Hello!</p>`;
+    return html`<wc-header></wc-header>Header
+               <div ><ion-button  @click="${this.dismissModal}">Dismiss</ion-button></div>
+    `;
   }
 }
-
-// customElements.define('simple-greeting', SimpleGreeting);

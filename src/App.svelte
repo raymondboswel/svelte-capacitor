@@ -7,7 +7,6 @@
 <ion-app>
 	<Router {routes} />
 
-	<ion-modal-controller />
 </ion-app>
 
 <style @global>
