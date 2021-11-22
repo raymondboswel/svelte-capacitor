@@ -3,8 +3,7 @@
 import type { SvelteComponent } from "svelte/internal";
 import {
   modalController,
-  toastController,
-  ToastOptions
+  toastController
 } from "@ionic/core";
 
 export const getIonicNav = () => {
@@ -52,7 +51,7 @@ export const IonicShowPopover = async (
   return ionicitem;
 };
  */
-export const IonicShowToast = async (options: ToastOptions) => {
+export const IonicShowToast = async (options: any) => {
   const toast = await toastController.create(options);
   toast.present();
   return toast;
