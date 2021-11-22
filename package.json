@@ -19,7 +19,8 @@
     "dev:start": "run-p build:routify dev:vite",
     "dev:vite": "vite --host --port 5001",
     "#Utilities": "Various utilities",
-    "validate": "svelte-check"
+    "validate": "svelte-check",
+    "postinstall": "cp -r node_modules/@ionic/core assets/ionic/"
   },
   "devDependencies": {
     "@roxi/routify": "^2.18.0",
