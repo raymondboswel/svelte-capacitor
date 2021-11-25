@@ -2,15 +2,9 @@
   var name = "svelte";
   var image = "svelte_cap.png";
 
-  import Text from "@components/Text.svelte";
-import {
-  modalController,
-} from '@ionic/core';
 
 import '@components/ModalGreeting';
 
-import {LitElement, html} from 'lit';
-import {customElement, property} from 'lit/decorators.js';
 import { IonicShowModal, IonicShowToast } from "@utils/IonicHelper";
 import Header from "@components/Header.wc.svelte";
 
@@ -73,12 +67,12 @@ import Header from "@components/Header.wc.svelte";
 
   <ion-card>
     <ion-card-header>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
       <ion-card-title
         ><div class="ion-activatable ripple-parent">
           <ion-ripple-effect />Card Title
         </div></ion-card-title
       >
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
     </ion-card-header>
 
     <ion-card-content>
@@ -88,8 +82,10 @@ import Header from "@components/Header.wc.svelte";
   </ion-card>
 
   <ion-button on:click={presentModal} class="ion-activatable ripple-parent"
-    ><ion-ripple-effect />Woo!</ion-button
+    >Woo!</ion-button
   >
+
+  
 </div>
 
 <style>

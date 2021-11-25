@@ -19,8 +19,7 @@
     "dev:start": "run-p build:routify dev:vite",
     "dev:vite": "vite --host --port 5001",
     "#Utilities": "Various utilities",
-    "validate": "svelte-check",
-    "postinstall": "cp -r node_modules/@ionic/core assets/ionic/"
+    "validate": "svelte-check"
   },
   "devDependencies": {
     "@roxi/routify": "^2.18.0",
@@ -31,12 +30,13 @@
     "prettier": "^2.2.1",
     "prettier-plugin-svelte": "^2.2.0",
     "svelte": "^3.37.0",
-    "svelte-preprocess": "^4.7.3",
+    "svelte-preprocess": "^4.9.8",
     "typescript": "^4.2.4",
     "vite": "^2.2.3",
     "vite-aliases": "^0.6.3",
     "vite-plugin-compression": "^0.2.5",
-    "vite-tsconfig-paths": "^3.3.10"
+    "vite-tsconfig-paths": "^3.3.10",
+    "sass": "^1.42.1"
   },
   "dependencies": {
     "@capacitor/android": "^3.0.1",
