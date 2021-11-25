@@ -1,6 +1,6 @@
 <script>
-  import { quintOut } from "svelte/easing";
-  import { fly } from "svelte/transition";
+import { quintOut } from "svelte/easing";
+import { fly } from "svelte/transition";
 </script>
 
 <article
@@ -11,7 +11,6 @@
     opacity: 0,
     easing: quintOut,
   }}
-  
 >
   <slot />
 </article>

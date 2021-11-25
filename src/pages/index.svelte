@@ -1,23 +1,31 @@
+<style>
+.main {
+  text-align: center;
+  margin: 50px auto;
+}
+
+img {
+  max-width: 100%;
+}
+</style>
+
 <script lang="ts">
-  var name = "svelte";
-  var image = "svelte_cap.png";
+var name = "svelte";
+var image = "svelte_cap.png";
 
-  import "@components/ModalGreeting";
+import "@components/ModalGreeting";
 
-  import { IonicShowModal, IonicShowToast } from "@utils/IonicHelper";
-  import Header from "@components/Header.wc.svelte";
-  import FlyIn from "@components/animation/FlyIn.svelte";
-  import FadeInFlyOut from "@components/animation/Fade.svelte";
-  import { goto } from "@roxi/routify";
-  import { fade } from "svelte/transition";
-  import Fade from "@components/animation/Fade.svelte";
+import { IonicShowModal, IonicShowToast } from "@utils/IonicHelper";
+import Header from "@components/Header.wc.svelte";
+import { goto } from "@roxi/routify";
+import Fade from "@components/animation/Fade.svelte";
 
-  try {
-    customElements.define(
-      "modal-page",
-      class extends HTMLElement {
-        connectedCallback() {
-          this.innerHTML = `
+try {
+  customElements.define(
+    "modal-page",
+    class extends HTMLElement {
+      connectedCallback() {
+        this.innerHTML = `
                 <ion-header>
                 <ion-toolbar>
                     <ion-title>Modal Header</ion-title>
@@ -31,14 +39,14 @@
                     <ion-content class="ion-padding">
                 <Text></Text>
                 </ion-content>`;
-        }
       }
-    );
-  } catch (e) {}
+    }
+  );
+} catch (e) {}
 
-  async function presentModal() {
-    // create the modal with the `modal-page` component
-    /*     const modalElement = document.createElement('ion-modal');
+async function presentModal() {
+  // create the modal with the `modal-page` component
+  /*     const modalElement = document.createElement('ion-modal');
     (modalElement as any).component = 'modal-page';
     (modalElement as any).cssClass = 'my-custom-class';
 
@@ -47,7 +55,7 @@
     return (modalElement as any).present();
  */
 
-    /* const popover = await modalController.create({
+  /* const popover = await modalController.create({
       component: 'simple-greeting'      
     })
  
@@ -56,13 +64,13 @@
     console.log(data);
     } */
 
-    IonicShowModal("wc-header", Header, {});
-    IonicShowToast({ message: "Ionic woo!" });
-  }
+  IonicShowModal("wc-header", Header, {});
+  IonicShowToast({ message: "Ionic woo!" });
+}
 
-  function wooo() {
-    alert("Wooo!");
-  }
+function wooo() {
+  alert("Wooo!");
+}
 </script>
 
 <Fade>
@@ -93,14 +101,3 @@
     <ion-button on:click={$goto("/registration")}>Create Account</ion-button>
   </div>
 </Fade>
-
-<style>
-  .main {
-    text-align: center;
-    margin: 50px auto;
-  }
-
-  img {
-    max-width: 100%;
-  }
-</style>

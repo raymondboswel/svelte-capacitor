@@ -20,7 +20,7 @@
     "dev:vite": "vite --host --port 5001",
     "#Utilities": "Various utilities",
     "validate": "svelte-check",
-    "format": "prettier --write"
+    "format": "prettier --write src/**/*"
   },
   "devDependencies": {
     "@roxi/routify": "^2.18.0",

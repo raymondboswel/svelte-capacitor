@@ -1,8 +1,6 @@
 <script>
-  import { quintOut } from "svelte/easing";
-  import { fly } from "svelte/transition";
-  import FlyIn from "@components/animation/FlyIn.svelte";
-  import {goto, isActive, url} from '@roxi/routify'
+import FlyIn from "@components/animation/FlyIn.svelte";
+import { goto } from "@roxi/routify";
 </script>
 
 <FlyIn>
@@ -17,7 +15,7 @@
       <input placeholder="Surname" />
       <input placeholder="Email address" />
       <section class="mt-4">
-        <ion-button on:click="{ $goto('./')}">Back</ion-button>
+        <ion-button on:click={$goto("./")}>Back</ion-button>
         <ion-button>Create Account</ion-button>
       </section>
     </section>

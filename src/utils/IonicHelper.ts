@@ -1,10 +1,5 @@
-
-  
 import type { SvelteComponent } from "svelte/internal";
-import {
-  modalController,
-  toastController
-} from "@ionic/core";
+import { modalController, toastController } from "@ionic/core";
 
 export const getIonicNav = () => {
   return document.querySelector("ion-nav");
