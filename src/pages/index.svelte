@@ -63,7 +63,7 @@ import Header from "@components/Header.wc.svelte";
 </script>
 
 <div class="main">
-  <img src={image} />
+  <img class="mx-auto" src={image} />
 
   <ion-card>
     <ion-card-header>

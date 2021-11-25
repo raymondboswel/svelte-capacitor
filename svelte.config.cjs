@@ -6,6 +6,8 @@ const config = {
       scss: {
         prependData: '@import "src/variables.scss";',
       },
+
+      postcss: true,
     }),
   ],
 };

@@ -36,7 +36,12 @@
     "vite-aliases": "^0.6.3",
     "vite-plugin-compression": "^0.2.5",
     "vite-tsconfig-paths": "^3.3.10",
-    "sass": "^1.42.1"
+    "sass": "^1.42.1",
+    "postcss": "^8.3.9",
+    "postcss-load-config": "^3.1.0",
+    "autoprefixer": "^10.3.7",
+    "cssnano": "^5.0.8",
+    "tailwindcss": "next"
   },
   "dependencies": {
     "@capacitor/android": "^3.0.1",
