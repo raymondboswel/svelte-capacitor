@@ -1,14 +1,3 @@
-<style>
-.main {
-  text-align: center;
-  margin: 50px auto;
-}
-
-img {
-  max-width: 100%;
-}
-</style>
-
 <script lang="ts">
 var name = "svelte";
 var image = "svelte_cap.png";
@@ -101,3 +90,14 @@ function wooo() {
     <ion-button on:click={$goto("/registration")}>Create Account</ion-button>
   </div>
 </Fade>
+
+<style>
+.main {
+  text-align: center;
+  margin: 50px auto;
+}
+
+img {
+  max-width: 100%;
+}
+</style>
