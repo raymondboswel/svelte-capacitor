@@ -84,10 +84,11 @@ function wooo() {
     </ion-card>
 
     <ion-button on:click={presentModal} class="ion-activatable ripple-parent"
-      >Woo!</ion-button
+      >Show Modal</ion-button
     >
 
     <ion-button on:click={$goto("/registration")}>Create Account</ion-button>
+    <ion-button on:click={$goto("/app/home")}>Sign In</ion-button>
   </div>
 </Fade>
 

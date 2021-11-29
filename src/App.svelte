@@ -17,6 +17,8 @@
   import { IonRippleEffect } from "@ionic/core/components/ion-ripple-effect";
   import { onMount } from "svelte";
 
+  import { defineCustomElements } from '@ionic/pwa-elements/loader';
+
   onMount(() => {
     initialize();
 
@@ -42,6 +44,8 @@
     }
 
     document.documentElement.classList.add('ion-ce');
+
+    defineCustomElements(window);
   });
 </script>
 
